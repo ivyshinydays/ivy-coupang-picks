@@ -1,0 +1,24 @@
+{
+  "name": "Ivy's Picks",
+  "short_name": "Ivy's Picks",
+  "description": "Ivy의 쿠팡 추천 페이지 바로가기",
+  "start_url": "./open.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff7f7",
+  "theme_color": "#f9dfe4",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
