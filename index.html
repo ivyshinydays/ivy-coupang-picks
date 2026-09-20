@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#fffaf3">
 <title>Coupang Picks | IVY SHINY DAYS</title>
-
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icon-192.png">
 
@@ -16,57 +15,21 @@
 <meta property="og:description" content="Good Choices, Brighter Days. 직접 고른 Coupang 추천 아이템.">
 <meta property="og:url" content="https://ivyshinydays.github.io/ivy-coupang-picks/">
 <meta property="og:image" content="https://ivyshinydays.github.io/ivy-coupang-picks/og-coupang-picks.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Coupang Picks | IVY SHINY DAYS">
-<meta name="twitter:description" content="Good Choices, Brighter Days. 직접 고른 Coupang 추천 아이템.">
-<meta name="twitter:image" content="https://ivyshinydays.github.io/ivy-coupang-picks/og-coupang-picks.jpg">
 
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;background:#f4f1eb}
-body{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;
-}
-.page{
-  position:relative;
-  width:min(100vw,600px);
-  line-height:0;
-  background:#fffaf3;
-}
+body{min-height:100vh;display:flex;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif}
+.page{position:relative;width:min(100vw,600px);line-height:0;background:#fffaf3}
 .design{display:block;width:100%;height:auto}
-
-/* 가운데 시안 이미지 속 버튼 위에 실제 클릭 영역만 겹침 */
-.hotspot{
-  position:absolute;
-  left:4.3%;
-  width:91.4%;
-  border:0;
-  background:transparent;
-  cursor:pointer;
-  z-index:5;
-  border-radius:999px;
-  -webkit-tap-highlight-color:transparent;
-}
-.shop{top:63.05%;height:6.45%}
-.install{top:70.25%;height:6.45%}
+.hotspot{position:absolute;left:8.1%;width:83.8%;border:0;background:transparent;cursor:pointer;z-index:5;border-radius:999px;-webkit-tap-highlight-color:transparent}
+.shop{top:62.0%;height:7.35%}
+.install{top:70.25%;height:7.25%}
 .hotspot:focus-visible{outline:3px solid #e52b25;outline-offset:3px}
 
-/* 설치 안내 */
-.modal{
-  position:fixed;inset:0;z-index:50;
-  display:none;align-items:flex-end;justify-content:center;
-  padding:14px;background:rgba(18,31,42,.42);line-height:1.45
-}
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:flex-end;justify-content:center;padding:14px;background:rgba(18,31,42,.42);line-height:1.45}
 .modal.open{display:flex}
-.sheet{
-  width:min(100%,520px);max-height:88vh;overflow:auto;
-  padding:22px 20px 20px;border-radius:28px;
-  background:#fffaf3;color:#172d43;
-  box-shadow:0 20px 60px rgba(0,0,0,.24)
-}
+.sheet{width:min(100%,520px);max-height:88vh;overflow:auto;padding:22px 20px 20px;border-radius:28px;background:#fffaf3;color:#172d43;box-shadow:0 20px 60px rgba(0,0,0,.24)}
 .top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
 h2{font-size:22px;line-height:1.3;margin:0}
 h2 span{display:block;font-size:14px;font-weight:500;color:#607488;margin-top:4px}
@@ -76,87 +39,52 @@ h2 span{display:block;font-size:14px;font-weight:500;color:#607488;margin-top:4p
 .tab.active{background:#172d43;color:white;border-color:#172d43}
 .steps{display:none}.steps.active{display:block}
 .step{padding:12px 14px;margin:8px 0;border-radius:15px;background:#f7f3ed;font-size:14px}
-.step b,.step span{display:block}
-.step span{margin-top:3px;color:#607488;font-size:12px}
+.step b,.step span{display:block}.step span{margin-top:3px;color:#607488;font-size:12px}
 .installNow{width:100%;margin-top:11px;padding:14px;border:0;border-radius:16px;background:#e62b25;color:white;font-size:16px;font-weight:800}
 @media(min-width:601px){.page{box-shadow:0 0 45px rgba(0,0,0,.07)}}
 </style>
 </head>
-
 <body>
 <main class="page">
-  <img class="design" src="./coupang-picks-design.jpg" alt="Coupang Picks by IVY SHINY DAYS">
-
-  <a class="hotspot shop"
-     href="https://influencers.coupang.com/s/ivyshinydays"
-     aria-label="지금 바로 구경하기, Shop Coupang Picks"></a>
-
-  <button class="hotspot install" id="openGuide" type="button"
-          aria-label="홈 화면에 추가하기, Add to Home Screen"></button>
+<img class="design" src="./coupang-picks-design.jpg" alt="Coupang Picks by IVY SHINY DAYS">
+<a class="hotspot shop" href="https://influencers.coupang.com/s/ivyshinydays" aria-label="지금 바로 구경하기, Shop Coupang Picks"></a>
+<button class="hotspot install" id="openGuide" type="button" aria-label="홈 화면에 추가하기, Add to Home Screen"></button>
 </main>
 
-<div class="modal" id="guide" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
-  <div class="sheet">
-    <div class="top">
-      <h2 id="guideTitle">홈 화면에 추가하기<span>Add to Home Screen</span></h2>
-      <button class="close" id="closeGuide" type="button" aria-label="닫기">×</button>
-    </div>
-
-    <div class="tabs">
-      <button class="tab active" type="button" data-target="iphone">iPhone</button>
-      <button class="tab" type="button" data-target="android">Android</button>
-    </div>
-
-    <section class="steps active" id="iphone">
-      <div class="step"><b>① Safari로 열어주세요.</b><span>Open this page in Safari.</span></div>
-      <div class="step"><b>② 공유 버튼 □↑ 을 눌러주세요.</b><span>Tap the Share button.</span></div>
-      <div class="step"><b>③ ‘홈 화면에 추가’를 선택하세요.</b><span>Choose “Add to Home Screen.”</span></div>
-    </section>
-
-    <section class="steps" id="android">
-      <div class="step"><b>① Chrome으로 열어주세요.</b><span>Open this page in Chrome.</span></div>
-      <div class="step"><b>② 아래 설치 버튼을 눌러주세요.</b><span>Tap the install button below.</span></div>
-      <div class="step"><b>③ 설치창이 안 뜨면 Chrome 메뉴 ⋮ 를 이용하세요.</b><span>Or tap ⋮ and choose “Add to Home screen.”</span></div>
-      <button class="installNow" id="installNow" type="button">홈 화면에 설치하기<br>Install to Home Screen</button>
-    </section>
-  </div>
-</div>
+<div class="modal" id="guide" role="dialog" aria-modal="true">
+<div class="sheet">
+<div class="top"><h2>홈 화면에 추가하기<span>Add to Home Screen</span></h2><button class="close" id="closeGuide" type="button">×</button></div>
+<div class="tabs"><button class="tab active" type="button" data-target="iphone">iPhone</button><button class="tab" type="button" data-target="android">Android</button></div>
+<section class="steps active" id="iphone">
+<div class="step"><b>① Safari로 열어주세요.</b><span>Open this page in Safari.</span></div>
+<div class="step"><b>② 공유 버튼 □↑ 을 눌러주세요.</b><span>Tap the Share button.</span></div>
+<div class="step"><b>③ ‘홈 화면에 추가’를 선택하세요.</b><span>Choose “Add to Home Screen.”</span></div>
+</section>
+<section class="steps" id="android">
+<div class="step"><b>① Chrome으로 열어주세요.</b><span>Open this page in Chrome.</span></div>
+<div class="step"><b>② 아래 설치 버튼을 눌러주세요.</b><span>Tap the install button below.</span></div>
+<div class="step"><b>③ 설치창이 안 뜨면 Chrome 메뉴 ⋮ 를 이용하세요.</b><span>Or tap ⋮ and choose “Add to Home screen.”</span></div>
+<button class="installNow" id="installNow" type="button">홈 화면에 설치하기<br>Install to Home Screen</button>
+</section>
+</div></div>
 
 <script>
 let deferredPrompt=null;
 const modal=document.getElementById('guide');
-
-window.addEventListener('beforeinstallprompt',e=>{
-  e.preventDefault();
-  deferredPrompt=e;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e});
+document.getElementById('openGuide').onclick=()=>modal.classList.add('open');
+document.getElementById('closeGuide').onclick=()=>modal.classList.remove('open');
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
+document.querySelectorAll('.tab').forEach(btn=>btn.onclick=()=>{
+document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+document.querySelectorAll('.steps').forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');document.getElementById(btn.dataset.target).classList.add('active');
 });
-
-document.getElementById('openGuide').addEventListener('click',()=>modal.classList.add('open'));
-document.getElementById('closeGuide').addEventListener('click',()=>modal.classList.remove('open'));
-modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
-
-document.querySelectorAll('.tab').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-    document.querySelectorAll('.steps').forEach(x=>x.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.target).classList.add('active');
-  });
-});
-
-document.getElementById('installNow').addEventListener('click',async()=>{
-  if(deferredPrompt){
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt=null;
-  }else{
-    alert("Chrome 메뉴(⋮)에서 ‘홈 화면에 추가’ 또는 ‘앱 설치’를 선택해주세요.\n\nIn Chrome, tap ⋮ and choose ‘Add to Home screen’ or ‘Install app’.");
-  }
-});
-
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('./sw.js').then(reg=>reg.update()).catch(()=>{});
-}
+document.getElementById('installNow').onclick=async()=>{
+if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null}
+else alert("Chrome 메뉴(⋮)에서 ‘홈 화면에 추가’ 또는 ‘앱 설치’를 선택해주세요.\n\nIn Chrome, tap ⋮ and choose ‘Add to Home screen’ or ‘Install app’.");
+};
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(()=>{})}
 </script>
 </body>
 </html>
