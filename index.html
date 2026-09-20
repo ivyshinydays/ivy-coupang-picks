@@ -3,98 +3,215 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#fbf7f1">
+<meta name="theme-color" content="#fffdf9">
+<meta name="description" content="좋은 선택이 더 나은 일상을 만들어요. IVY SHINY DAYS의 Coupang Picks.">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<title>Coupang Picks | IVY SHINY DAYS</title>
-
-<meta name="description" content="제가 직접 골라본, 일상에 도움이 되는 추천 상품들을 만나보세요.">
 <link rel="canonical" href="https://ivyshinydays.github.io/ivy-coupang-picks/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="IVY SHINY DAYS">
 <meta property="og:title" content="Coupang Picks | IVY SHINY DAYS">
-<meta property="og:description" content="제가 직접 골라본, 일상에 도움이 되는 추천 상품들을 만나보세요. ♡">
+<meta property="og:description" content="좋은 선택이 더 나은 일상을 만들어요. 직접 고른 추천템을 만나보세요.">
 <meta property="og:url" content="https://ivyshinydays.github.io/ivy-coupang-picks/">
 <meta property="og:image" content="https://ivyshinydays.github.io/ivy-coupang-picks/og-coupang-picks.jpg">
-<meta property="og:image:secure_url" content="https://ivyshinydays.github.io/ivy-coupang-picks/og-coupang-picks.jpg">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="IVY SHINY DAYS Coupang Picks">
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Coupang Picks | IVY SHINY DAYS">
-<meta name="twitter:description" content="제가 직접 골라본, 일상에 도움이 되는 추천 상품들을 만나보세요. ♡">
+<meta name="twitter:description" content="좋은 선택이 더 나은 일상을 만들어요. 직접 고른 추천템을 만나보세요.">
 <meta name="twitter:image" content="https://ivyshinydays.github.io/ivy-coupang-picks/og-coupang-picks.jpg">
 
+<title>Coupang Picks | IVY SHINY DAYS</title>
 <style>
-*{box-sizing:border-box} html,body{margin:0;min-height:100%;background:#f8f2eb;color:#352118;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif}
-.page{width:min(100%,1024px);margin:0 auto;position:relative;background:#fbf7f1;box-shadow:0 0 50px rgba(69,42,26,.08)}
-.design{display:block;width:100%;height:auto}
-.hotspot{position:absolute;top:43.0%;height:13.4%;border:0;background:transparent;cursor:pointer;border-radius:24px;-webkit-tap-highlight-color:transparent}
-.hotspot:focus-visible{outline:3px solid rgba(75,43,27,.55);outline-offset:-5px}
-.hotspot.good{left:3.7%;width:30.2%}.hotspot.save{left:35.7%;width:29.7%}.hotspot.shop{left:67.1%;width:29.7%}
-.modal{position:fixed;inset:0;z-index:50;background:rgba(42,27,20,.42);display:none;align-items:flex-end;justify-content:center;padding:18px}
-.modal.open{display:flex}.sheet{width:min(100%,520px);max-height:86vh;overflow:auto;background:#fffaf5;border-radius:28px;padding:25px 22px 22px;box-shadow:0 20px 70px rgba(35,20,12,.25);animation:up .2s ease-out}
-@keyframes up{from{transform:translateY(18px);opacity:.5}to{transform:none;opacity:1}}
-.sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.eyebrow{font-size:12px;letter-spacing:.22em;color:#9b7662;margin:0 0 6px}.sheet h2{font-family:Georgia,"Times New Roman",serif;font-size:29px;font-weight:500;margin:0;color:#3c2419}.close{width:38px;height:38px;border:0;border-radius:50%;background:#f5ece5;font-size:24px;color:#4a3024;cursor:pointer}.desc{font-size:15px;line-height:1.75;color:#66534a;margin:16px 0}.benefits{display:grid;gap:10px;margin:16px 0}.benefit,.step{background:#fbf5ef;border:1px solid #efe2d8;border-radius:18px;padding:15px 16px;line-height:1.6}.benefit b,.step b{display:block;color:#40291e;margin-bottom:3px}.tabs{display:flex;gap:8px;margin:15px 0}.tab{flex:1;border:1px solid #e5d4c8;background:#fff;border-radius:13px;padding:11px;font-weight:700;color:#5b4032}.tab.active{background:#4a2c1f;color:#fff;border-color:#4a2c1f}.steps{display:none;gap:10px}.steps.active{display:grid}.primary{display:block;width:100%;border:0;border-radius:16px;background:#4a2c1f;color:#fff;text-align:center;text-decoration:none;padding:15px 18px;font-size:16px;font-weight:800;margin-top:17px;cursor:pointer}.fine{font-size:12px;line-height:1.55;color:#917a6d;margin:12px 2px 0;text-align:center}
-@media(max-width:600px){.page{box-shadow:none}.hotspot{border-radius:12px}.sheet{border-radius:24px;padding:22px 18px}.sheet h2{font-size:26px}}
+:root{
+  --navy:#142d49; --coral:#ef6964; --cream:#fffdf9;
+  --soft:#f7f0e8; --blue:#eef5f8; --muted:#58708b;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:#f7f5f1;color:var(--navy);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif}
+body{padding:0}
+.page{width:min(100%,560px);margin:auto;background:var(--cream);min-height:100vh;padding:34px 22px 28px}
+.brand{text-align:center;font-size:15px;letter-spacing:.30em;font-weight:600}
+.tag{text-align:center;font-size:10px;letter-spacing:.32em;margin-top:8px;color:#526a82}
+h1{font-family:Georgia,"Times New Roman",serif;text-align:center;font-size:44px;line-height:1;margin:35px 0 13px;color:#071c32;letter-spacing:-.035em}
+.rocket{font-family:system-ui;font-size:.72em;color:var(--coral)}
+.intro{text-align:center;margin:0 auto 25px;line-height:1.55}
+.intro .ko{font-size:18px;font-weight:650}
+.intro .en{font-size:14px;letter-spacing:.08em;color:var(--muted);margin-top:5px}
+.hero{width:100%;aspect-ratio:1.12/1;object-fit:cover;display:block;border-radius:180px 180px 26px 26px;box-shadow:0 12px 35px rgba(31,42,50,.08)}
+.actions{display:grid;gap:11px;margin-top:-26px;position:relative;z-index:2}
+.btn{width:100%;min-height:78px;border:0;border-radius:28px;padding:13px 18px;display:grid;grid-template-columns:52px 1fr 22px;align-items:center;text-decoration:none;cursor:pointer;box-shadow:0 8px 20px rgba(30,45,58,.10);font:inherit}
+.btn .ico{font-size:31px;text-align:center}
+.btn .copy{text-align:left;line-height:1.2}
+.btn .ko{display:block;font-size:19px;font-weight:800}
+.btn .en{display:block;font-size:14px;margin-top:5px;font-weight:500}
+.btn .arrow{font-size:29px;font-weight:300}
+.shop{background:var(--coral);color:white}
+.save{background:var(--blue);color:var(--navy)}
+.save .ico{font-size:27px}
+.micro{text-align:center;font-size:13px;line-height:1.5;color:var(--muted);margin:11px 5px 0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:28px 0 25px}
+.feature{text-align:center;padding:0 4px}
+.feature+.feature{border-left:1px solid #ccd5dc}
+.feature .icon{width:46px;height:46px;border-radius:50%;background:var(--soft);display:grid;place-items:center;margin:0 auto 9px;font-size:23px}
+.feature .ko{font-size:13px;font-weight:750;line-height:1.25}
+.feature .en{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.25}
+.footer{text-align:center;border-top:1px solid #d8dfe4;padding-top:20px}
+.footer .brand2{font-size:12px;letter-spacing:.30em;font-weight:700}
+.footer .slogan{font-family:Georgia,"Times New Roman",serif;font-style:italic;margin-top:8px;font-size:14px}
+.disclosure{font-size:10px;line-height:1.55;color:#8b8b87;margin:18px auto 0;max-width:460px}
+
+/* bottom sheet */
+.modal{position:fixed;inset:0;background:rgba(9,25,39,.38);display:none;align-items:flex-end;justify-content:center;padding:14px;z-index:20}
+.modal.open{display:flex}
+.sheet{width:min(100%,520px);background:#fffdf9;border-radius:28px;padding:23px 20px 20px;max-height:88vh;overflow:auto;box-shadow:0 20px 70px rgba(0,0,0,.22)}
+.sheet-top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
+.sheet h2{margin:0;font-size:22px;line-height:1.35}
+.sheet h2 small{display:block;font-size:14px;color:var(--muted);font-weight:500;margin-top:5px}
+.close{border:0;background:#f2eee8;border-radius:50%;width:38px;height:38px;font-size:23px;color:var(--navy)}
+.tabs{display:flex;gap:8px;margin:19px 0 12px}
+.tab{flex:1;border:1px solid #dbe2e7;background:white;border-radius:14px;padding:11px;color:var(--navy);font-weight:750}
+.tab.active{background:var(--navy);color:white;border-color:var(--navy)}
+.steps{display:none}
+.steps.active{display:block}
+.step{padding:13px 14px;background:#f8f5f0;border-radius:15px;margin:8px 0;line-height:1.45;font-size:14px}
+.step b{display:block;margin-bottom:3px}
+.step .en{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.install-now{width:100%;border:0;border-radius:17px;background:var(--coral);color:#fff;padding:15px;font-size:16px;font-weight:800;margin-top:12px}
+@media(max-width:390px){
+  .page{padding:27px 16px 24px}
+  h1{font-size:39px}
+  .btn{min-height:72px;grid-template-columns:45px 1fr 18px}
+  .btn .ko{font-size:17px}.btn .en{font-size:13px}
+}
 </style>
 </head>
 <body>
-<main class="page" aria-label="IVY SHINY DAYS Coupang Picks">
-  <img class="design" src="./coupang-design.png" alt="IVY SHINY DAYS Coupang Picks. 제가 직접 골라본, 일상에 도움이 되는 추천 상품들을 만나보세요.">
-  <button class="hotspot good" aria-label="홈 화면에 저장하면 좋은 점" data-modal="why"></button>
-  <button class="hotspot save" aria-label="바로가기 저장하는 법" data-modal="how"></button>
-  <a class="hotspot shop" aria-label="설치 없이 바로 쿠팡 추천 상품 구경하기" href="https://influencers.coupang.com/s/ivyshinydays"></a>
+<main class="page">
+  <div class="brand">IVY SHINY DAYS</div>
+  <div class="tag">TRAVEL · LIFE · MOM · PICKS</div>
+
+  <h1>Coupang Picks <span class="rocket">🚀</span></h1>
+  <div class="intro">
+    <div class="ko">좋은 선택이, 더 나은 일상을 만들어요.</div>
+    <div class="en">Good Choices,<br>Brighter Days.</div>
+  </div>
+
+  <img class="hero" src="./hero-coupang.jpg" alt="따뜻한 일상 속 IVY SHINY DAYS Coupang Picks">
+
+  <div class="actions">
+    <a class="btn shop" href="https://influencers.coupang.com/s/ivyshinydays">
+      <span class="ico">🛒</span>
+      <span class="copy"><span class="ko">지금 바로 구경하기</span><span class="en">Shop Now</span></span>
+      <span class="arrow">›</span>
+    </a>
+
+    <button class="btn save" id="saveBtn" type="button">
+      <span class="ico">♡</span>
+      <span class="copy"><span class="ko">홈 화면에 추가하기</span><span class="en">Add to Home Screen</span></span>
+      <span class="arrow">›</span>
+    </button>
+  </div>
+
+  <div class="micro">
+    한 번만 저장하면, 언제든지 바로 접속해요!<br>
+    Save once for quick access anytime.
+  </div>
+
+  <section class="features" aria-label="특징">
+    <div class="feature">
+      <div class="icon">☆</div>
+      <div class="ko">직접 고른 추천템</div>
+      <div class="en">Handpicked</div>
+    </div>
+    <div class="feature">
+      <div class="icon">▣</div>
+      <div class="ko">빠른 배송</div>
+      <div class="en">Fast Delivery</div>
+    </div>
+    <div class="feature">
+      <div class="icon">♡</div>
+      <div class="ko">더 나은 일상</div>
+      <div class="en">A Brighter You</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="brand2">IVY SHINY DAYS</div>
+    <div class="slogan">Good Choices · Brighter Days ♡</div>
+    <div class="disclosure">
+      쿠팡 파트너스 활동을 통해 일정액의 수수료를 제공받을 수 있습니다.<br>
+      구매하시는 가격은 동일합니다.<br><br>
+      I may earn a commission through qualifying Coupang purchases.<br>
+      There is no extra cost to you.
+    </div>
+  </footer>
 </main>
 
-<div class="modal" id="why" role="dialog" aria-modal="true" aria-labelledby="whyTitle">
- <div class="sheet">
-  <div class="sheet-head"><div><p class="eyebrow">IVY SHINY DAYS</p><h2 id="whyTitle">홈 화면에 저장하면 좋은 점 ♡</h2></div><button class="close" aria-label="닫기">×</button></div>
-  <p class="desc">한 번만 저장해두면 매번 링크를 다시 찾지 않아도, 앱처럼 한 번에 Ivy의 Coupang Picks로 들어올 수 있어요.</p>
-  <div class="benefits">
-   <div class="benefit"><b>⌂ 언제든 한 번에</b>홈 화면에서 바로 열 수 있어요.</div>
-   <div class="benefit"><b>◷ 링크를 다시 찾을 필요 없이</b>블로그나 메시지를 뒤질 필요가 없어요.</div>
-   <div class="benefit"><b>♡ 제가 직접 고른 추천템으로</b>필요할 때 편하게 다시 찾아보세요.</div>
-  </div>
-  <button class="primary" data-switch="how">바로가기 저장하는 법 보기</button>
- </div>
-</div>
+<div class="modal" id="guide" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+  <div class="sheet">
+    <div class="sheet-top">
+      <h2 id="guideTitle">홈 화면에 추가하기<small>Add to Home Screen</small></h2>
+      <button class="close" id="closeGuide" aria-label="닫기">×</button>
+    </div>
 
-<div class="modal" id="how" role="dialog" aria-modal="true" aria-labelledby="howTitle">
- <div class="sheet">
-  <div class="sheet-head"><div><p class="eyebrow">QUICK GUIDE</p><h2 id="howTitle">바로가기 저장하는 법 ♡</h2></div><button class="close" aria-label="닫기">×</button></div>
-  <p class="desc">카카오톡·인스타그램 안에서 열었다면 먼저 Safari 또는 Chrome으로 열어주세요.</p>
-  <div class="tabs"><button class="tab active" data-tab="iphone">iPhone</button><button class="tab" data-tab="android">Android</button></div>
-  <div class="steps active" id="iphone">
-   <div class="step"><b>1. Safari로 열기</b>현재 화면을 Safari에서 열어주세요.</div>
-   <div class="step"><b>2. 공유 버튼 누르기</b>Safari 아래쪽의 공유 버튼(□↑)을 눌러주세요.</div>
-   <div class="step"><b>3. ‘홈 화면에 추가’ 선택</b>목록에서 ‘홈 화면에 추가’를 누른 뒤 ‘추가’를 선택하면 완료!</div>
+    <div class="tabs">
+      <button class="tab active" data-tab="iphone">iPhone</button>
+      <button class="tab" data-tab="android">Android</button>
+    </div>
+
+    <div class="steps active" id="iphone">
+      <div class="step"><b>① Safari로 열어주세요.</b><span class="en">Open this page in Safari.</span></div>
+      <div class="step"><b>② 공유 버튼 □↑ 을 눌러주세요.</b><span class="en">Tap the Share button.</span></div>
+      <div class="step"><b>③ ‘홈 화면에 추가’를 선택하세요.</b><span class="en">Choose “Add to Home Screen.”</span></div>
+    </div>
+
+    <div class="steps" id="android">
+      <div class="step"><b>① Chrome으로 열어주세요.</b><span class="en">Open this page in Chrome.</span></div>
+      <div class="step"><b>② 아래 설치 버튼을 눌러주세요.</b><span class="en">Tap the install button below.</span></div>
+      <div class="step"><b>③ 안 뜨면 ⋮ → ‘홈 화면에 추가’를 선택하세요.</b><span class="en">Or tap ⋮ → “Add to Home screen.”</span></div>
+      <button class="install-now" id="installNow">홈 화면에 설치하기<br>Install to Home Screen</button>
+    </div>
   </div>
-  <div class="steps" id="android">
-   <div class="step"><b>1. Chrome으로 열기</b>현재 화면을 Chrome에서 열어주세요.</div>
-   <div class="step"><b>2. 아래 버튼 눌러보기</b>지원되는 기기에서는 설치 안내가 바로 나타나요.</div>
-   <div class="step"><b>3. 안내가 안 뜬다면</b>Chrome 오른쪽 위 ⋮ → ‘홈 화면에 추가’ 또는 ‘앱 설치’를 선택하세요.</div>
-  </div>
-  <button class="primary" id="install">홈 화면에 저장하기</button>
-  <p class="fine">iPhone은 Safari의 ‘홈 화면에 추가’를 이용해주세요.</p>
- </div>
 </div>
 
 <script>
-let promptEvent=null;
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();promptEvent=e;});
-const modals=[...document.querySelectorAll('.modal')];
-function openModal(id){modals.forEach(m=>m.classList.remove('open'));document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
-function closeAll(){modals.forEach(m=>m.classList.remove('open'));document.body.style.overflow=''}
-document.querySelectorAll('[data-modal]').forEach(el=>el.addEventListener('click',()=>openModal(el.dataset.modal)));
-document.querySelectorAll('.close').forEach(el=>el.addEventListener('click',closeAll));
-modals.forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeAll()}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
-document.querySelector('[data-switch="how"]').addEventListener('click',()=>openModal('how'));
-document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.steps').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById(t.dataset.tab).classList.add('active')}));
-document.getElementById('install').addEventListener('click',async()=>{const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);if(promptEvent){promptEvent.prompt();await promptEvent.userChoice;promptEvent=null}else if(ios){alert("Safari 아래쪽 공유 버튼(□↑) → ‘홈 화면에 추가’ → ‘추가’를 눌러주세요.")}else{alert("Chrome 오른쪽 위 ⋮ 메뉴에서 ‘홈 화면에 추가’ 또는 ‘앱 설치’를 선택해주세요.")}});
-if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
+let deferredPrompt=null;
+const modal=document.getElementById('guide');
+const saveBtn=document.getElementById('saveBtn');
+const closeGuide=document.getElementById('closeGuide');
+const installNow=document.getElementById('installNow');
+
+window.addEventListener('beforeinstallprompt',e=>{
+  e.preventDefault();
+  deferredPrompt=e;
+});
+
+saveBtn.addEventListener('click',()=>modal.classList.add('open'));
+closeGuide.addEventListener('click',()=>modal.classList.remove('open'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+
+document.querySelectorAll('.tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.steps').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+installNow.addEventListener('click',async()=>{
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt=null;
+  }else{
+    alert("Chrome 메뉴(⋮)에서\n‘홈 화면에 추가’ 또는 ‘앱 설치’를 선택해주세요.\n\nIn Chrome, tap ⋮ and choose\n‘Add to Home screen’ or ‘Install app’.");
+  }
+});
+
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js').then(r=>r.update()).catch(()=>{});
+}
 </script>
 </body>
 </html>
